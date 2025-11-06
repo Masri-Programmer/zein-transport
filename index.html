@@ -1,156 +1,975 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Added lang="de" for German -->
 
-    <title>Zein Transport - Seite im Aufbau</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Zein Transport - Autotransport & Handel in Berlin</title>
+    <!-- Updated Title -->
     <meta
       name="description"
-      content="Die offizielle Webseite von Zein Transport befindet sich derzeit im Aufbau. Kontaktieren Sie uns für Transportlösungen unter +49 173 4400908."
+      content="Zein Transport - Ihr zuverlässiger Partner für Autotransport (A nach B) und An- & Verkauf von Fahrzeugen in Berlin und Umgebung (100km+)."
     />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.zein-transport.de/" />
+    <!-- Added Meta Description -->
+    <meta
+      name="keywords"
+      content="Autotransport Berlin, Zein Transport, Auto transportieren Berlin, Auto An- und Verkauf Berlin, Fahrzeughandel Berlin"
+    />
+    <!-- Added Keywords -->
 
+    <link href="assets/zein/logo-circle.png" rel="icon" />
+    <link href="assets/zein/logo-circle.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      rel="icon"
-      href="https://placehold.co/32x32/dc2626/ffffff?text=Z"
-      type="image/png"
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.zein-transport.de/" />
-    <meta property="og:title" content="Zein Transport - Seite im Aufbau" />
-    <meta
-      property="og:description"
-      content="Die offizielle Webseite von Zein Transport befindet sich derzeit im Aufbau. Kontaktieren Sie uns für Transportlösungen."
-    />
-    <meta
-      property="og:image"
-      content="https://placehold.co/1200x630/1a202c/ffffff?text=Zein+Transport"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.zein-transport.de/" />
-    <meta property="twitter:title" content="Zein Transport - Seite im Aufbau" />
-    <meta
-      property="twitter:description"
-      content="Die offizielle Webseite von Zein Transport befindet sich derzeit im Aufbau. Kontaktieren Sie uns für Transportlösungen."
-    />
-    <meta
-      property="twitter:image"
-      content="https://placehold.co/1200x630/1a202c/ffffff?text=Zein+Transport"
-    />
-    <!-- Ende der neuen Meta-Tags -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      :root {
-        --primary: #1a202c;
-        --secondary: #e0e0e0;
-        --danger: #dc2626;
-        --foreground: #ffffff;
-      }
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-      .font-roboto {
-        font-family: "Roboto", sans-serif;
-      }
-      .font-montserrat {
-        font-family: "Montserrat", sans-serif;
-      }
-      .font-anton {
-        font-family: "Anton", sans-serif;
-      }
-
-      body {
-        background-image: url("./zein-transport\ \(1\).png");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      .bg-custom-dark-blue {
-        background-color: #1a202c;
-      }
-      .text-custom-red {
-        color: #dc2626;
-      }
-      .text-custom-light-gray {
-        color: #e0e0e0;
-      }
-      .bg-custom-card-gray {
-        background-color: rgba(243, 244, 246, 0.95);
-      }
-      .text-custom-white {
-        color: #ffffff;
-      }
-      .border-custom-dark-blue {
-        border-color: #1a202c;
-      }
-    </style>
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
   </head>
-  <body
-    class="relative min-h-screen flex items-center justify-center p-4 font-roboto"
-  >
-    <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-    <div
-      class="relative z-10 max-w-2xl w-full mx-auto rounded-lg shadow-xl bg-white border-4 border-gray-900 overflow-hidden text-center"
-    >
-      <img
-        src="./aufbau.jpg"
-        alt="Im Aufbau"
-        class="w-full h-48 object-contain"
-      />
-
-      <div class="p-8">
-        <h1
-          class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-gray-900 font-anton uppercase tracking-wide"
-        >
-          ZEIN TRANSPORT
-        </h1>
-        <p
-          class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-red-600 font-montserrat"
-        >
-          Seite im Aufbau
-        </p>
-        <p class="text-lg sm:text-xl mb-4 text-gray-800">
-          Wir arbeiten fleißig daran, unsere neue Webseite für Sie zu erstellen.
-        </p>
-        <p class="text-lg sm:text-xl mb-8 text-gray-800">
-          Vielen Dank für Ihre Geduld!
-        </p>
-
-        <div class="mt-8 font-montserrat">
-          <p class="text-base sm:text-lg font-semibold text-gray-900">
-            Kontaktieren Sie uns:
-            <a
-              href="tel:+491734400908"
-              class="block text-2xl sm:text-3xl font-bold mt-1 text-red-600 hover:text-red-700 transition-colors"
-            >
-              +49 173 4400908
-            </a>
-          </p>
-
-          <p class="text-base sm:text-lg mt-6 text-gray-900">
-            Besuchen Sie uns bald wieder auf:
-          </p>
-          <a
-            href="https://www.zein-transport.de"
-            class="block text-xl sm:text-2xl font-bold text-gray-900 hover:text-red-600 transition-colors break-words"
-          >
-            www.zein-transport.de
+  <body class="index-page">
+    <header id="header" class="header sticky-top">
+      <div class="container-fluid container-xl position-relative">
+        <div class="top-row d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img
+              src="assets/zein/logo-circle.png"
+              alt="Zein Transport - Auto Transport Handel"
+            />
+            <h1 class="sitename">Zein Transport</h1>
           </a>
+
+          <!-- Removed social links and search bar as requested implicitly -->
         </div>
       </div>
+
+      <div class="nav-wrap">
+        <div class="container d-flex justify-content-center position-relative">
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="#hero" class="active">Home</a></li>
+              <li><a href="#about">Über Uns</a></li>
+              <!-- Updated Nav Link -->
+              <li><a href="#services">Services</a></li>
+              <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+              <!-- Removed Portfolio -->
+              <!-- <li><a href="#team">Team</a></li> -->
+              <!-- Removed Team -->
+              <!-- Removed Dropdown -->
+              <li><a href="#contact">Kontakt</a></li>
+              <!-- Updated Nav Link -->
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-7">
+              <div
+                class="hero-card shadow-sm"
+                data-aos="fade-right"
+                data-aos-delay="150"
+              >
+                <!-- Removed Eyebrow -->
+                <div class="content">
+                  <h2 class="display-5 fw-bold mb-3">
+                    Zuverlässiger Autotransport in Berlin & Umgebung
+                  </h2>
+                  <!-- Updated H2 -->
+                  <p class="lead mb-4">
+                    Wir transportieren Ihr Fahrzeug sicher von A nach B.
+                    Zusätzlich bieten wir fairen An- und Verkauf von
+                    Gebrauchtwagen.
+                  </p>
+                  <!-- Updated Paragraph -->
+                  <div class="d-flex flex-wrap gap-3">
+                    <a href="#services" class="btn btn-primary-ghost">
+                      <span>Unsere Services</span>
+                      <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <!-- Updated Button -->
+                    <!-- Removed Video Button -->
+                  </div>
+                  <!-- Removed Mini-Stats -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="media-stack" data-aos="zoom-in" data-aos-delay="200">
+                <figure class="media primary shadow-sm">
+                  <img
+                    src="assets/zein/zein-transport-card-back.png"
+                    class="img-fluid"
+                    alt="Hero visual"
+                  />
+                </figure>
+                <figure class="media secondary shadow-sm">
+                  <img
+                    src="assets/zein/zein-transport-card-front.png"
+                    class="img-fluid"
+                    alt="Supporting visual"
+                  />
+                </figure>
+                <div
+                  class="floating-badge d-flex align-items-center shadow-sm"
+                  data-aos="fade-down"
+                  data-aos-delay="300"
+                >
+                  <i class="bi bi-award me-2"></i>
+                  <span>Auto Transport Handel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Removed Featured Services Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Über Uns</h2>
+          <!-- Updated Title -->
+          <p>
+            Ihr Partner für professionellen Autotransport und Fahrzeughandel
+          </p>
+          <!-- Updated Subtitle -->
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row g-4 align-items-stretch">
+            <div
+              class="col-lg-5 order-lg-2"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <aside class="showcase">
+                <figure class="showcase-main">
+                  <!-- Placeholder image, recommend replacing with a real one -->
+                  <img
+                    src="assets/img/about/about-portrait-7.webp"
+                    alt="Zein Transport Team"
+                    class="img-fluid"
+                  />
+                  <figcaption
+                    class="badge-note"
+                    data-aos="zoom-in"
+                    data-aos-delay="350"
+                  >
+                    <i class="bi bi-truck"></i>
+                    <!-- Updated Icon -->
+                    <div>
+                      <strong>Immer Unterwegs</strong>
+                      <!-- Updated Text -->
+                      <small>Sicher & Pünktlich</small>
+                      <!-- Updated Text -->
+                    </div>
+                  </figcaption>
+                </figure>
+              </aside>
+            </div>
+
+            <div
+              class="col-lg-7 order-lg-1"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <article class="intro-card">
+                <div class="intro-head">
+                  <span class="kicker"
+                    ><i class="bi bi-stars me-1"></i>Willkommen</span
+                  >
+                  <!-- Updated Text -->
+                  <h2>Zuverlässigkeit und Professionalität</h2>
+                  <!-- Updated H2 -->
+                </div>
+
+                <div class="intro-body">
+                  <p class="lead">
+                    Bei Zein Transport sind wir stolz darauf, erstklassige
+                    Transportlösungen und Fahrzeugdienste in Berlin und einem
+                    Umkreis von über 100 km anzubieten.
+                  </p>
+                  <!-- Updated Text -->
+                  <p>
+                    Unser Team ist auf den sicheren und pünktlichen Transport
+                    von Fahrzeugen spezialisiert. Darüber hinaus bieten wir
+                    einen transparenten und fairen An- und Verkauf von
+                    Gebrauchtwagen. Kundenzufriedenheit steht bei uns an erster
+                    Stelle.
+                  </p>
+                  <!-- Updated Text -->
+
+                  <div class="feature-list row gy-3">
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-up"
+                      data-aos-delay="250"
+                    >
+                      <div class="feature-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <!-- Updated Icon -->
+                        <div class="text">
+                          <h6>Großraum Berlin & 100km+</h6>
+                          <!-- Updated Text -->
+                          <p>
+                            Wir sind flexibel und bedienen ein großes
+                            Einzugsgebiet.
+                          </p>
+                          <!-- Updated Text -->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-up"
+                      data-aos-delay="300"
+                    >
+                      <div class="feature-item">
+                        <i class="bi bi-shield-check"></i>
+                        <!-- Updated Icon -->
+                        <div class="text">
+                          <h6>Sicher & Versichert</h6>
+                          <!-- Updated Text -->
+                          <p>Ihr Fahrzeug ist bei uns in sicheren Händen.</p>
+                          <!-- Updated Text -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Removed Metric Band -->
+
+                  <div
+                    class="actions d-flex flex-wrap align-items-center gap-3"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <a href="#contact" class="btn btn-accent">
+                      <i class="bi bi-envelope me-1"></i> Kontakt Aufnehmen
+                    </a>
+                    <!-- Updated Button -->
+                    <a href="tel:+491734400908" class="link-more">
+                      Jetzt Anrufen
+                      <i class="bi bi-arrow-right-short"></i>
+                    </a>
+                    <!-- Updated Link -->
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- New Auto Ankauf (Car Buying) CTA Section -->
+      <section id="auto-ankauf-cta" class="auto-ankauf-cta section">
+        <div class="container text-center" data-aos="fade-up">
+          <div
+            class="cta-content"
+            style="padding: 40px; border-radius: 12px; border: 1px solid #ddd"
+          >
+            <h2
+              class="display-6 fw-bold mb-3"
+              style="color: var(--accent-color)"
+            >
+              Wir kaufen Ihr Fahrzeug!
+            </h2>
+            <p class="fs-4 mb-4" style="color: var(--accent-color)">
+              Nennen Sie den Preis, der Ihnen für Ihr Fahrzeug passt!
+            </p>
+            <a
+              href="#contact"
+              class="btn btn-lg"
+              style="color: var(--accent-color)"
+            >
+              <i class="bi bi-cash-coin me-2"></i> Jetzt Angebot Anfordern
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>Unsere Dienstleistungen</p>
+          <!-- Updated Subtitle -->
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Services Grid -->
+          <!-- Simplified to two services as requested -->
+          <div class="row gy-5 justify-content-center">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-card">
+                <div class="service-number">01</div>
+                <div class="service-icon-wrapper">
+                  <div class="service-icon">
+                    <i class="bi bi-truck"></i>
+                    <!-- Updated Icon -->
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h4>Autotransport (A nach B)</h4>
+                  <!-- Updated Title -->
+                  <p>
+                    Sicherer und zuverlässiger Transport Ihres Fahrzeugs in
+                    Berlin und einem Umkreis von 100km+. Wir sorgen dafür, dass
+                    Ihr Auto pünktlich und unversehrt am Ziel ankommt.
+                  </p>
+                  <!-- Updated Text -->
+                  <ul class="service-list">
+                    <li>Transport von PKWs</li>
+                    <li>Berlin & 100km+ Umgebung</li>
+                    <li>Pünktlich & Zuverlässig</li>
+                    <li>Versicherter Transport</li>
+                  </ul>
+                  <!-- Updated List -->
+                  <div class="service-pricing">
+                    <span class="price-tag">Auf Anfrage</span>
+                    <!-- Updated Price -->
+                    <a href="#contact" class="service-btn">
+                      <span>Anfragen</span>
+                      <!-- Updated Button Text -->
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-card featured">
+                <!-- Kept 'featured' class for emphasis -->
+                <div class="service-number">02</div>
+                <div class="service-icon-wrapper">
+                  <div class="service-icon">
+                    <i class="bi bi-cash-coin"></i>
+                    <!-- Updated Icon -->
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h4>An- und Verkauf</h4>
+                  <!-- Updated Title -->
+                  <p>
+                    Wir kaufen Ihr gebrauchtes Fahrzeug zu fairen Konditionen
+                    oder helfen Ihnen, das passende Auto zu finden. Transparente
+                    Abwicklung garantiert.
+                  </p>
+                  <!-- Updated Text -->
+                  <ul class="service-list">
+                    <li>Fairer Autoankauf</li>
+                    <li>Verkauf von Gebrauchtwagen</li>
+                    <li>Schnelle Abwicklung</li>
+                    <li>Transparente Preise</li>
+                  </ul>
+                  <!-- Updated List -->
+                  <div class="service-pricing">
+                    <span class="price-tag">Faire Preise</span>
+                    <!-- Updated Price -->
+                    <a href="#contact" class="service-btn">
+                      <span>Anfragen</span>
+                      <!-- Updated Button Text -->
+                      <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Removed other service items -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Removed Features Section -->
+      <!-- Removed Portfolio Section -->
+      <!-- Removed Testimonials Section -->
+
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section dark-background"
+      >
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="cta-wrapper">
+            <div class="content-block">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <div
+                    class="text-content"
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                  >
+                    <div
+                      class="section-label"
+                      data-aos="fade-up"
+                      data-aos-delay="250"
+                    >
+                      <span>Unverbindliches Angebot</span>
+                      <!-- Updated Text -->
+                    </div>
+
+                    <h2 data-aos="fade-up" data-aos-delay="300">
+                      Holen Sie sich jetzt Ihr Angebot
+                      <span class="accent-text"
+                        >für Transport oder An/Verkauf</span
+                      >
+                      <!-- Updated Text -->
+                    </h2>
+
+                    <p data-aos="fade-up" data-aos-delay="350">
+                      Interessiert? Kontaktieren Sie uns für ein unverbindliches
+                      Angebot. Bald können Sie hier auch direkt eine
+                      detaillierte Anfrage für Ihr Fahrzeug stellen.
+                    </p>
+                    <!-- Updated Text -->
+
+                    <!-- Removed benefits list -->
+
+                    <div
+                      class="action-group"
+                      data-aos="fade-up"
+                      data-aos-delay="450"
+                    >
+                      <a href="#contact" class="btn btn-primary-action"
+                        >Jetzt Anfragen</a
+                      >
+                      <!-- Updated Button Text -->
+                      <a href="tel:+491734400908" class="btn btn-text-link">
+                        <i class="bi bi-telephone-fill"></i>
+                        <!-- Updated Icon -->
+                        +49 173 4400908
+                      </a>
+                      <!-- Updated Link -->
+                    </div>
+
+                    <!-- Removed trust indicators -->
+                  </div>
+                </div>
+
+                <div class="col-lg-5">
+                  <div
+                    class="visual-section"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                  >
+                    <div class="image-container">
+                      <!-- Recommend replacing with a real photo -->
+                      <img
+                        src="assets/img/cta/cta-4.webp"
+                        alt="Autotransport"
+                        class="main-visual"
+                      />
+
+                      <!-- Removed floating badges -->
+                    </div>
+
+                    <div class="decorative-elements">
+                      <div class="element element-1"></div>
+                      <div class="element element-2"></div>
+                      <div class="element element-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
+      <!-- Removed Team Section -->
+      <!-- Removed Pricing Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>F.A.Q</h2>
+          <p>Häufig gestellte Fragen</p>
+          <!-- Updated Subtitle -->
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="faq-wrapper">
+                <div class="faq-item faq-active">
+                  <div class="faq-header">
+                    <div class="faq-icon">
+                      <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h4>Welche Gebiete decken Sie ab?</h4>
+                    <!-- Updated Question -->
+                    <div class="faq-toggle">
+                      <i class="bi bi-plus"></i>
+                      <i class="bi bi-dash"></i>
+                    </div>
+                  </div>
+                  <div class="faq-content">
+                    <div class="content-inner">
+                      <p>
+                        Wir transportieren Fahrzeuge in ganz Berlin und einem
+                        Umkreis von 100km+. Weitere Strecken sind
+                        selbstverständlich auch auf Anfrage möglich.
+                      </p>
+                      <!-- Updated Answer -->
+                    </div>
+                  </div>
+                </div>
+                <!-- End FAQ Item -->
+
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <div class="faq-icon">
+                      <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h4>Welche Arten von Fahrzeugen transportieren Sie?</h4>
+                    <!-- Updated Question -->
+                    <div class="faq-toggle">
+                      <i class="bi bi-plus"></i>
+                      <i class="bi bi-dash"></i>
+                    </div>
+                  </div>
+                  <div class="faq-content">
+                    <div class="content-inner">
+                      <p>
+                        Wir sind auf den Transport von PKWs (Personenkraftwagen)
+                        spezialisiert. Für spezielle Anfragen, wie z.B.
+                        Transporter oder Oldtimer, kontaktieren Sie uns bitte
+                        direkt.
+                      </p>
+                      <!-- Updated Answer -->
+                    </div>
+                  </div>
+                </div>
+                <!-- End FAQ Item -->
+
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <div class="faq-icon">
+                      <i class="bi bi-question-circle"></i>
+                    </div>
+                    <h4>Wie erhalte ich ein Angebot?</h4>
+                    <!-- Updated Question -->
+                    <div class="faq-toggle">
+                      <i class="bi bi-plus"></i>
+                      <i class="bi bi-dash"></i>
+                    </div>
+                  </div>
+                  <div class="faq-content">
+                    <div class="content-inner">
+                      <p>
+                        Nutzen Sie einfach unser Kontaktformular weiter unten,
+                        rufen Sie uns an unter
+                        <a href="tel:+491734400908">+49 173 4400908</a>,
+                        schreiben Sie uns eine WhatsApp oder senden Sie eine
+                        E-Mail an
+                        <a href="mailto:info@zein-transport.de"
+                          >info@zein-transport.de</a
+                        >.
+                      </p>
+                      <!-- Updated Answer -->
+                    </div>
+                  </div>
+                </div>
+                <!-- End FAQ Item -->
+
+                <!-- Removed other FAQ items -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section dark-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Kontakt</h2>
+          <!-- Updated Title -->
+          <p>Kontaktieren Sie uns für ein Angebot</p>
+          <!-- Updated Subtitle -->
+        </div>
+        <!-- End Section Title -->
+
+        <div
+          class="container position-relative"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Standort</h3>
+                  <p>Berlin & Umgebung (100km+)</p>
+                  <!-- Updated Address -->
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Telefon</h3>
+                  <p>+49 173 4400908</p>
+                  <!-- Updated Phone -->
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>info@zein-transport.de</p>
+                  <!-- Updated Email -->
+                </div>
+              </div>
+              <!-- End Info Item -->
+            </div>
+
+            <div class="col-lg-7">
+              <!--
+                HINWEIS: Dieses Formular verwendet 'php-email-form'.
+                Damit es funktioniert, müssen Sie die Datei 'forms/contact.php'
+                auf Ihrem Server konfigurieren, um E-Mails von Ihrer Domain
+                zu senden.
+                Als Alternative habe ich ein JavaScript hinzugefügt (siehe unten),
+                das stattdessen das E-Mail-Programm des Benutzers öffnet.
+                Wenn Sie 'forms/contact.php' verwenden möchten, entfernen Sie
+                bitte die 'id="quoteForm"' und die 'onsubmit="handleFormSubmit(event)"'
+                aus dem <form> Tag.
+              -->
+              <form
+                id="quoteForm"
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                onsubmit="handleFormSubmit(event)"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      id="form-name"
+                      name="name"
+                      class="form-control"
+                      placeholder="Ihr Name"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      id="form-email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Ihre Email"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      id="form-subject"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Betreff (z.B. Transportanfrage)"
+                      required=""
+                    />
+                    <!-- Updated Placeholder -->
+                  </div>
+
+                  <!-- Added fields for the quote form -->
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      id="form-car-model"
+                      class="form-control"
+                      name="car-model"
+                      placeholder="Fahrzeugmodell (z.B. VW Golf 8)"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      id="form-start-address"
+                      class="form-control"
+                      name="start-address"
+                      placeholder="Start-Adresse (Transport)"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      id="form-end-address"
+                      class="form-control"
+                      name="end-address"
+                      placeholder="Ziel-Adresse (Transport)"
+                    />
+                  </div>
+                  <!-- End of added fields -->
+
+                  <div class="col-md-12">
+                    <textarea
+                      id="form-message"
+                      class="form-control"
+                      name="message"
+                      rows="6"
+                      placeholder="Ihre Nachricht (bitte weitere Details angeben)"
+                      required=""
+                    ></textarea>
+                    <!-- Updated Placeholder -->
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Ihre Nachricht wurde weitergeleitet. Vielen Dank!
+                    </div>
+
+                    <button type="submit">Anfrage Senden</button>
+                    <!-- Updated Button Text -->
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-6">
+            <!-- Increased width -->
+            <div class="footer-brand">
+              <a href="index.html" class="logo d-flex align-items-center mb-3">
+                <span class="sitename">Zein Transport</span>
+              </a>
+              <p class="tagline">
+                Ihr Partner für Autotransport und Fahrzeughandel in Berlin &
+                Umgebung.
+              </p>
+              <!-- Updated Tagline -->
+              <!-- Removed Social Links -->
+            </div>
+          </div>
+
+          <!-- Removed Footer Links Grid -->
+
+          <div class="col-lg-6">
+            <!-- Increased width -->
+            <div class="footer-cta text-lg-end">
+              <!-- Aligned to end -->
+              <h5>Kontakt</h5>
+              <!-- Updated Title -->
+              <p class_="mb-2">
+                <a href="tel:+491734400908">+49 173 4400908</a>
+              </p>
+              <p class="mb-3">
+                <a href="mailto:info@zein-transport.de"
+                  >info@zein-transport.de</a
+                >
+              </p>
+              <a href="#contact" class="btn btn-outline">Schreiben Sie uns</a>
+              <!-- Updated Button -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="footer-bottom-content">
+                <p class="mb-0">
+                  © <span class="sitename">Zein Transport</span>. Alle Rechte
+                  vorbehalten.
+                </p>
+                <!-- Updated Copyright -->
+                <div class="credits">
+                  <!-- All the links in the footer should remain intact. -->
+                  <!-- You can delete the links only if you've purchased the pro version. -->
+                  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                  <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                  Designed by
+                  <a href="https://bootstrapmade.com/">BootstrapMade</a> | Made
+                  by
+                  <a href="https://masri-programmer.de/">Masri Programmer</a> |
+                  <a href="impressum.html">Impressum</a> |
+                  <a href="datenschutz.html">Datenschutz</a>
+                  <!-- Added Impressum Link -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- WhatsApp Float Button -->
+    <a
+      href="https://wa.me/491734400908"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Keep validate.js for client-side validation -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Custom JS for Mailto Form -->
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Stop form from submitting normally
+
+        const form = event.target;
+        const name = document.getElementById("form-name").value;
+        const email = document.getElementById("form-email").value;
+        const subject = document.getElementById("form-subject").value;
+        const carModel = document.getElementById("form-car-model").value;
+        const startAddress =
+          document.getElementById("form-start-address").value;
+        const endAddress = document.getElementById("form-end-address").value;
+        const message = document.getElementById("form-message").value;
+
+        // Client-side validation
+        if (!name || !email || !subject || !message) {
+          // Use the form's built-in error display
+          form.querySelector(".error-message").innerHTML =
+            "Bitte füllen Sie alle erforderlichen Felder aus.";
+          form.querySelector(".error-message").style.display = "block";
+          form.querySelector(".sent-message").style.display = "none";
+          return;
+        }
+
+        const mailtoSubject = `Anfrage von ${name}: ${subject}`;
+        let mailtoBody = `Neue Anfrage von der Webseite:\n
+Name: ${name}
+Email: ${email}
+Betreff: ${subject}
+\n
+Fahrzeugmodell: ${carModel || "Keine Angabe"}
+Start-Adresse: ${startAddress || "Keine Angabe"}
+Ziel-Adresse: ${endAddress || "Keine Angabe"}
+\n
+Nachricht:
+${message}
+`;
+
+        // Encode for URL
+        const mailtoLink = `mailto:info@zein-transport.de?subject=${encodeURIComponent(
+          mailtoSubject
+        )}&body=${encodeURIComponent(mailtoBody)}`;
+
+        // Show success message
+        form.querySelector(".loading").style.display = "none";
+        form.querySelector(".error-message").style.display = "none";
+        form.querySelector(".sent-message").style.display = "block";
+
+        // Open mail client
+        window.location.href = mailtoLink;
+
+        // Reset form after a delay
+        setTimeout(() => {
+          form.reset();
+          form.querySelector(".sent-message").style.display = "none";
+        }, 5000);
+      }
+    </script>
   </body>
 </html>
