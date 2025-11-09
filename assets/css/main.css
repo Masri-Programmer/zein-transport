@@ -21,56 +21,71 @@
   --nav-font: "Inter", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  /* --- Global Colors (Your Palette) --- */
-  --background-color: #1a202c; /* Mapped from your 'primary' */
-  --default-color: #ffffff; /* Mapped from your 'foreground' */
-  --heading-color: #ffffff; /* Mapped from your 'foreground' */
-  --accent-color: #4299e1; /* Mapped from your 'accent' */
-  --surface-color: #2d3748; /* A new shade for dark mode cards */
-  --contrast-color: #ffffff; /* For text on accent backgrounds */
+  --background-color: #3b3127;
+  --default-color: #f7f7f7;
+  --heading-color: #b04443;
+  --accent-color: #c99e4b;
+  --surface-color: #7b292c;
+  --contrast-color: #f7f7f7;
 
-  /* --- Your Other Palette Colors --- */
-  /* These are new variables you can use in your CSS */
-  --color-secondary: #e0e0e0; /* Your 'secondary' (for borders, etc.) */
-  --color-danger: #dc2626; /* Your 'danger' */
-  --color-success: #38a169; /* Your 'success' */
-  --color-warning: #dd6b20; /* Your 'warning' */
+  --color-secondary: #e0e0e0;
+  --color-danger: #dc2626;
+  --color-success: #38a169;
+  --color-warning: #dd6b20;
 }
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff; /* The default color of the main navmenu links */
-  --nav-hover-color: #dd3209; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #171717; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #222222; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #dd3209; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;
+  --nav-hover-color: #dd3209;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #171717;
+  --nav-dropdown-color: #222222;
+  --nav-dropdown-hover-color: #dd3209;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 .light-background {
-  --background-color: #f9f5f4; /* A very light gray background */
-  --surface-color: #ffffff; /* White for cards */
-  --default-color: #444444; /* Dark text for readability */
-  --heading-color: #171717; /* Dark headings */
-  --contrast-color: #ffffff; /* Text on accent buttons */
-}
-.dark-background {
-  --background-color: #1a202c; /* Your primary */
-  --default-color: #ffffff; /* Your foreground */
-  --heading-color: #ffffff; /* Your foreground */
-  --surface-color: #2d3748; /* Your dark surface */
+  --background-color: #f9f5f4;
+  --surface-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #171717;
   --contrast-color: #ffffff;
 }
-/* Smooth scroll */
+.dark-background {
+  --background-color: #3b3127;
+  --default-color: #f7f7f7;
+  --heading-color: #b04443;
+  --surface-color: #7b292c;
+  --contrast-color: #f7f7f7;
+}
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--background-color);
+}
+
+::-webkit-scrollbar {
+  width: 36px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+
+  border: 4px solid var(--background-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -97,7 +112,6 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -518,8 +532,7 @@ h6 {
   font-size: 15px;
   padding: 80px 0 0;
   position: relative;
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
 }
 
 .footer .footer-brand h1,
@@ -816,38 +829,51 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Scroll Top Button
+# Floating Buttons
 --------------------------------------------------------------*/
-.scroll-top {
+.scroll-top,
+.whatsapp-float {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
   background-color: var(--accent-color);
-  width: 40px;
-  height: 40px;
+  color: var(--contrast-color);
   border-radius: 4px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.4s;
 }
 
-.scroll-top i {
+.scroll-top i,
+.whatsapp-float i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
 
-.scroll-top:hover {
+.scroll-top:hover,
+.whatsapp-float:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
+}
+
+.whatsapp-float {
+  right: 20px;
+}
+
+.scroll-top {
+  right: 74px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
 }
-
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -4294,11 +4320,11 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(
+  /* background-color: color-mix(
     in srgb,
     var(--background-color),
     transparent 10%
-  );
+  ); */
   border-color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
@@ -5021,28 +5047,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.whatsapp-float:hover {
-  color: #fff;
-  background-color: #128c7e;
-}
 
 .content-section {
   padding-top: 120px;
