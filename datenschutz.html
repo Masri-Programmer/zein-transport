@@ -13,7 +13,6 @@
     <link href="assets/zein/logo-circle.png" rel="icon" />
     <link href="assets/zein/logo-circle.png" rel="apple-touch-icon" />
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
@@ -21,7 +20,6 @@
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -37,23 +35,21 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- Custom CSS for WhatsApp Button -->
     <style></style>
   </head>
 
   <body class="index-page">
-    <!-- ======= Header ======= -->
     <header id="header" class="header sticky-top">
       <div class="container-fluid container-xl position-relative">
         <div class="top-row d-flex align-items-center justify-content-between">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img
-              src="assets/zein/logo-circle.png"
-              alt="Zein Transport - Auto Transport Handel"
-            />
+          <a
+            href="index.html"
+            class="logo d-flex align-items-center"
+            aria-label="Zein Transport - Zur Startseite"
+          >
+            <img src="assets/zein/logo-circle.png" alt="Zein Transport Logo" />
             <h1 class="sitename">Zein Transport</h1>
           </a>
         </div>
@@ -61,10 +57,19 @@
 
       <div class="nav-wrap">
         <div class="container d-flex justify-content-center position-relative">
-          <nav id="navmenu" class="navmenu">
+          <nav
+            id="navmenu"
+            class="navmenu"
+            aria-label="{{ trans('aria-labels.main_navigation') }}"
+          >
             <ul>
-              <!-- Links zur Hauptseite -->
-              <li><a href="index.html#hero">Home</a></li>
+              <li>
+                <a
+                  href="index.html#hero"
+                  aria-label="{{ trans('aria-labels.go_to_hero_section') }}"
+                  >Home</a
+                >
+              </li>
               <li><a href="index.html#about">Über Uns</a></li>
               <li><a href="index.html#services">Services</a></li>
               <li><a href="index.html#contact">Kontakt</a></li>
@@ -74,10 +79,7 @@
         </div>
       </div>
     </header>
-    <!-- End Header -->
-
-    <main class="main">
-      <!-- ======= Content Section ======= -->
+    <main class="main" role="main">
       <section id="datenschutz" class="content-section section">
         <div class="container" data-aos="fade-up">
           <div class="row">
@@ -227,10 +229,8 @@
           </div>
         </div>
       </section>
-      <!-- End Content Section -->
     </main>
 
-    <!-- ======= Footer ======= -->
     <footer id="footer" class="footer position-relative">
       <div class="container">
         <div class="row gy-5">
@@ -282,7 +282,6 @@
                   |
                   <a href="impressum.html">Impressum</a> |
                   <a href="datenschutz.html">Datenschutz</a>
-                  <!-- Link hinzugefügt -->
                 </div>
               </div>
             </div>
@@ -290,28 +289,25 @@
         </div>
       </div>
     </footer>
-    <!-- End Footer -->
-
-    <!-- Scroll Top -->
     <a
       href="#"
       id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+      aria-label="{{ trans('aria-labels.scroll_to_top') }}"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-    <!-- WhatsApp Float Button -->
     <a
       href="https://wa.me/491734400908"
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label="{{ trans('aria-labels.chat_on_whatsapp') }}"
     >
       <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Preloader -->
     <div id="preloader">
       <div></div>
       <div></div>
@@ -319,7 +315,6 @@
       <div></div>
     </div>
 
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -330,7 +325,6 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>

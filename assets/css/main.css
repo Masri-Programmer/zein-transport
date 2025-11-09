@@ -12,6 +12,7 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+
 /* Fonts */
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -19,9 +20,21 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Lato", sans-serif;
   --nav-font: "Inter", sans-serif;
+
+  --color-secondary: #e0e0e0;
+  --color-danger: #dc2626;
+  --color-success: #38a169;
+  --color-warning: #dd6b20;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-:root {
+/* ==========================================================================
+   THEME 1: "CAR" (Red/Brown)
+   ==========================================================================
+*/
+
+[data-theme="theme1"][data-mode="dark"] {
   --background-color: #3b3127;
   --default-color: #f7f7f7;
   --heading-color: #b04443;
@@ -29,33 +42,61 @@
   --surface-color: #7b292c;
   --contrast-color: #f7f7f7;
 
-  --color-secondary: #e0e0e0;
-  --color-danger: #dc2626;
-  --color-success: #38a169;
-  --color-warning: #dd6b20;
-}
-:root {
   --nav-color: #ffffff;
   --nav-hover-color: #dd3209;
-  --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #171717;
   --nav-dropdown-color: #222222;
   --nav-dropdown-hover-color: #dd3209;
 }
 
-.light-background {
+[data-theme="theme1"][data-mode="light"] {
   --background-color: #f9f5f4;
-  --surface-color: #ffffff;
   --default-color: #444444;
   --heading-color: #171717;
-  --contrast-color: #ffffff;
+  --accent-color: #b04443;
+  --surface-color: #ffffff;
+  --contrast-color: #f9f5f4;
+
+  --nav-color: #3b3127;
+  --nav-hover-color: #b04443;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #b04443;
 }
-.dark-background {
-  --background-color: #3b3127;
-  --default-color: #f7f7f7;
-  --heading-color: #b04443;
-  --surface-color: #7b292c;
-  --contrast-color: #f7f7f7;
+
+/* ==========================================================================
+   3. THEME 2: "BLUE" (Original)
+   ==========================================================================
+*/
+
+[data-theme="theme2"][data-mode="dark"] {
+  --background-color: #1a202c;
+  --default-color: #ffffff;
+  --heading-color: #4299e1;
+  --accent-color: #4299e1;
+  --surface-color: #2d3748;
+  --contrast-color: #ffffff;
+
+  --nav-color: #ffffff;
+  --nav-hover-color: #4299e1;
+  --nav-dropdown-background-color: #171717;
+  --nav-dropdown-color: #222222;
+  --nav-dropdown-hover-color: #4299e1;
+}
+
+[data-theme="theme2"][data-mode="light"] {
+  --background-color: #f9f5f4;
+  --default-color: #444444;
+  --heading-color: #171717;
+  --accent-color: #4299e1;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  --nav-color: #2d3748;
+  --nav-hover-color: #4299e1;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #444444;
+  --nav-dropdown-hover-color: #4299e1;
 }
 :root {
   scroll-behavior: smooth;
@@ -67,7 +108,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 36px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -79,7 +120,7 @@ html {
   background-color: var(--accent-color);
   border-radius: 10px;
 
-  border: 4px solid var(--background-color);
+  border: 1px solid var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -111,6 +152,18 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 /* PHP Email Form Messages
 ------------------------------*/
@@ -162,7 +215,6 @@ h6 {
     transform: rotate(360deg);
   }
 }
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -191,6 +243,18 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
   margin: 0;
+}
+.header .btn.btn-accent {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-radius: 10px;
+  margin: 8px;
+  padding: 3px 6px;
+  font-weight: 600;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 8px 20px
+    color-mix(in srgb, var(--accent-color), transparent 70%);
+  transition: all 0.3s ease;
 }
 
 /* Global Header on Scroll
@@ -4227,28 +4291,31 @@ section,
 
 .contact .email-form input[type="text"],
 .contact .email-form input[type="email"],
+.contact .email-form input[type="tel"],
 .contact .email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  /* background-color: color-mix(
+  background-color: color-mix(
     in srgb,
     var(--background-color),
     transparent 10%
-  ); */
+  );
   border-color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
 .contact .email-form input[type="text"]:focus,
 .contact .email-form input[type="email"]:focus,
+.contact .email-form input[type="tel"]:focus,
 .contact .email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
 .contact .email-form input[type="text"]::placeholder,
 .contact .email-form input[type="email"]::placeholder,
+.contact .email-form input[type="tel"]::placeholder,
 .contact .email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }

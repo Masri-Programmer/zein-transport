@@ -16,7 +16,6 @@
     <link href="assets/zein/logo-circle.png" rel="icon" />
     <link href="assets/zein/logo-circle.png" rel="apple-touch-icon" />
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
@@ -24,7 +23,6 @@
       rel="stylesheet"
     />
 
-    <!-- Vendor CSS Files -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
@@ -40,7 +38,6 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
@@ -49,28 +46,56 @@
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
-        <a href="index.html" class="logo d-flex align-items-center">
-          <img
-            src="assets/zein/logo-circle.png"
-            alt="Zein Transport - Auto Transport Handel"
-          />
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center"
+          aria-label="Zein Transport - Zur Startseite"
+        >
+          <img src="assets/zein/logo-circle.png" alt="Zein Transport Logo" />
           <h1 class="sitename">Zein Transport</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
+        <nav
+          id="navmenu"
+          class="navmenu"
+          aria-label="{{ trans('aria-labels.main_navigation') }}"
+        >
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
+            <li>
+              <a
+                href="#hero"
+                class="active"
+                aria-label="{{ trans('aria-labels.go_to_hero_section') }}"
+                >Home</a
+              >
+            </li>
             <li><a href="#about">Über Uns</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Kontakt</a></li>
+            <div class="theme-toggle-container">
+              <button
+                id="theme-toggle-btn"
+                class="theme-toggle-btn btn btn-accent"
+                aria-label="{{ trans('aria-labels.toggle_theme') }}"
+              >
+                <i class="bi bi-sliders" aria-hidden="true"></i>
+              </button>
+
+              <button
+                id="mode-toggle-btn"
+                class="theme-toggle-btn btn btn-accent"
+                aria-label="{{ trans('aria-labels.toggle_mode') }}"
+              >
+                <i class="bi bi-sun" aria-hidden="true"></i>
+              </button>
+            </div>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
       </div>
     </header>
 
-    <main class="main">
-      <!-- Hero Section -->
+    <main class="main" role="main">
       <section id="hero" class="hero section dark-background">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row align-items-center gy-5">
@@ -95,7 +120,6 @@
                       ><i class="bi bi-arrow-right ms-2"></i
                     ></a>
                   </div>
-                  <!-- Removed Mini-Stats -->
                 </div>
               </div>
             </div>
@@ -129,21 +153,13 @@
           </div>
         </div>
       </section>
-      <!-- /Hero Section -->
-
-      <!-- Removed Featured Services Section -->
-
-      <!-- About Section -->
       <section id="about" class="about section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Über Uns</h2>
           <p>
             Ihr Partner für professionellen Autotransport und Fahrzeughandel
           </p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row g-4 align-items-stretch">
             <div
@@ -190,9 +206,8 @@
                   <p class="lead">
                     Bei Zein Transport sind wir stolz darauf, erstklassige
                     Transportlösungen und Fahrzeugdienste in Berlin und einem
-                    Umkreis von über 100 km anzubieten.
+                    Umkreis von über 300km+ anzubieten.
                   </p>
-                  <!-- Updated Text -->
                   <p>
                     Unser Team ist auf den sicheren und pünktlichen Transport
                     von Fahrzeugen spezialisiert. Darüber hinaus bieten wir
@@ -200,8 +215,6 @@
                     Gebrauchtwagen. Kundenzufriedenheit steht bei uns an erster
                     Stelle.
                   </p>
-                  <!-- Updated Text -->
-
                   <div class="feature-list row gy-3">
                     <div
                       class="col-md-6"
@@ -234,8 +247,6 @@
                     </div>
                   </div>
 
-                  <!-- Removed Metric Band -->
-
                   <div
                     class="actions d-flex flex-wrap align-items-center gap-3"
                     data-aos="fade-up"
@@ -254,8 +265,6 @@
           </div>
         </div>
       </section>
-      <!-- /About Section -->
-
       <section
         id="banner-section"
         class="banner-section section dark-background"
@@ -285,17 +294,12 @@
         </div>
       </section>
 
-      <!-- Services Section -->
       <section id="services" class="services section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
           <p>Unsere Dienstleistungen</p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <!-- Services Grid -->
           <div class="row gy-5 justify-content-center">
             <div
               class="col-lg-4 col-md-6"
@@ -347,7 +351,6 @@
                 </div>
                 <div class="service-content">
                   <h4>An- und Verkauf</h4>
-                  <!-- Updated Title -->
                   <p>
                     Wir kaufen Ihr gebrauchtes Fahrzeug zu fairen Konditionen
                     oder helfen Ihnen, das passende Auto zu finden. Transparente
@@ -369,12 +372,9 @@
                 </div>
               </div>
             </div>
-
-            <!-- Removed other service items -->
           </div>
         </div>
       </section>
-      <!-- Call To Action Section -->
       <section
         id="call-to-action"
         class="call-to-action section dark-background"
@@ -448,15 +448,11 @@
           </div>
         </div>
       </section>
-      <!-- Faq Section -->
       <section id="faq" class="faq section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>F.A.Q</h2>
           <p>Häufig gestellte Fragen</p>
         </div>
-        <!-- End Section Title -->
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -482,8 +478,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- End FAQ Item -->
-
                 <div class="faq-item">
                   <div class="faq-header">
                     <div class="faq-icon">
@@ -506,8 +500,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- End FAQ Item -->
-
                 <div class="faq-item">
                   <div class="faq-header">
                     <div class="faq-icon">
@@ -519,7 +511,7 @@
                     </div>
                   </div>
 
-                  <div class="faq-content">
+                  <div class="faq-content" id="faq-content-3">
                     <div class="content-inner">
                       <p>
                         Nutzen Sie einfach unser Kontaktformular weiter unten,
@@ -539,17 +531,11 @@
           </div>
         </div>
       </section>
-      <!-- /Faq Section -->
-
-      <!-- Contact Section -->
       <section id="contact" class="contact section dark-background">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Kontakt</h2>
           <p>Kontaktieren Sie uns für ein Angebot</p>
         </div>
-        <!-- End Section Title -->
-
         <div
           class="container position-relative"
           data-aos="fade-up"
@@ -564,8 +550,6 @@
                   <p>Berlin & Umgebung (300km+)</p>
                 </div>
               </div>
-              <!-- End Info Item -->
-
               <div class="info-item d-flex">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
@@ -573,8 +557,6 @@
                   <a href="tel:+491734400908">+49 173 4400908</a>
                 </div>
               </div>
-              <!-- End Info Item -->
-
               <div class="info-item d-flex">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
@@ -584,7 +566,6 @@
                   >
                 </div>
               </div>
-              <!-- End Info Item -->
             </div>
 
             <div class="col-lg-7">
@@ -597,6 +578,9 @@
               >
                 <div class="row gy-4">
                   <div class="col-md-6">
+                    <label for="form-name" class="sr-only"
+                      >{{ trans('aria-labels.your_name') }}</label
+                    >
                     <input
                       type="text"
                       id="form-name"
@@ -608,6 +592,9 @@
                   </div>
 
                   <div class="col-md-6">
+                    <label for="form-email" class="sr-only"
+                      >{{ trans('aria-labels.your_email') }}</label
+                    >
                     <input
                       type="email"
                       id="form-email"
@@ -619,6 +606,9 @@
                   </div>
 
                   <div class="col-md-6">
+                    <label for="form-phone" class="sr-only"
+                      >{{ trans('aria-labels.your_phone_optional') }}</label
+                    >
                     <input
                       type="tel"
                       id="form-phone"
@@ -629,6 +619,9 @@
                   </div>
 
                   <div class="col-md-6">
+                    <label for="form-subject" class="sr-only"
+                      >{{ trans('aria-labels.subject_eg_transport') }}</label
+                    >
                     <input
                       type="text"
                       id="form-subject"
@@ -640,6 +633,9 @@
                   </div>
 
                   <div class="col-md-12">
+                    <label for="form-car-model" class="sr-only"
+                      >{{ trans('aria-labels.car_model_eg_mercedes') }}</label
+                    >
                     <input
                       type="text"
                       id="form-car-model"
@@ -650,6 +646,9 @@
                   </div>
 
                   <div class="col-md-6">
+                    <label for="form-start-address" class="sr-only"
+                      >{{ trans('aria-labels.start_address_transport') }}</label
+                    >
                     <input
                       type="text"
                       id="form-start-address"
@@ -660,6 +659,9 @@
                   </div>
 
                   <div class="col-md-6">
+                    <label for="form-end-address" class="sr-only"
+                      >{{ trans('aria-labels.end_address_transport') }}</label
+                    >
                     <input
                       type="text"
                       id="form-end-address"
@@ -670,6 +672,9 @@
                   </div>
 
                   <div class="col-md-12">
+                    <label for="form-message" class="sr-only"
+                      >{{ trans('aria-labels.your_message_details') }}</label
+                    >
                     <textarea
                       id="form-message"
                       class="form-control"
@@ -685,14 +690,15 @@
                       class="form-check"
                       style="margin-bottom: 15px; text-align: left"
                     >
-                      <input
-                        type="checkbox"
-                        id="form-privacy"
-                        name="privacy-consent"
-                        class="form-check-input"
-                        required=""
-                        style="float: none; margin-right: 8px"
-                      /><label class="form-check-label" for="form-privacy">
+                      <label class="form-check-label" for="form-privacy">
+                        <input
+                          type="checkbox"
+                          id="form-privacy"
+                          name="privacy-consent"
+                          class="form-check-input"
+                          required=""
+                          style="float: none; margin-right: 8px"
+                        />
                         Ich habe die
                         <a
                           href="datenschutz.html"
@@ -775,26 +781,25 @@
       </div>
     </footer>
 
-    <!-- Scroll Top -->
     <a
       href="#"
       id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+      aria-label="{{ trans('aria-labels.scroll_to_top') }}"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
-    <!-- WhatsApp Float Button -->
     <a
       href="https://wa.me/491734400908"
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label="{{ trans('aria-labels.chat_on_whatsapp') }}"
     >
       <i class="bi bi-whatsapp"></i>
     </a>
 
-    <!-- Preloader -->
     <div id="preloader">
       <div></div>
       <div></div>
@@ -802,10 +807,8 @@
       <div></div>
     </div>
 
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/email-form/validate.js"></script>
-    <!-- Keep validate.js for client-side validation -->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -814,7 +817,6 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script>
       function handleFormSubmit(event) {
