@@ -39,6 +39,40 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "Zein Transport",
+        "description": "Ihr zuverlässiger Partner für Autotransport (A nach B) und An- & Verkauf von Fahrzeugen in Berlin und Umgebung (300km+).",
+        "telephone": "+491734400908",
+        "email": "info@zein-transport.de",
+        "image": "assets/zein/logo-circle.png",
+        "url": "https://www.zein-transport.de", // Ersetzen Sie dies durch Ihre tatsächliche Domain
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Berlin",
+          "addressCountry": "DE"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "52.520008", // Berlin Koordinaten
+            "longitude": "13.404954"
+          },
+          "geoRadius": "300000" // 300km Radius in Metern
+        },
+        "makesOffered": [], // Füllen, wenn Sie bestimmte Marken verkaufen
+        "serviceType": [
+          "Autotransport",
+          "Auto-Ankauf",
+          "Auto-Verkauf",
+          "Gebrauchtwagenhandel"
+        ]
+      }
+    </script>
   </head>
 
   <body class="index-page">
@@ -55,17 +89,10 @@
           <h1 class="sitename">Zein Transport</h1>
         </a>
 
-        <nav
-          id="navmenu"
-          class="navmenu"
-          aria-label="{{ trans('aria-labels.main_navigation') }}"
-        >
+        <nav id="navmenu" class="navmenu" aria-label="Hauptnavigation">
           <ul>
             <li>
-              <a
-                href="#hero"
-                class="active"
-                aria-label="{{ trans('aria-labels.go_to_hero_section') }}"
+              <a href="#hero" class="active" aria-label="Zum Startbereich"
                 >Home</a
               >
             </li>
@@ -76,7 +103,7 @@
               <button
                 id="theme-toggle-btn"
                 class="theme-toggle-btn btn btn-accent"
-                aria-label="{{ trans('aria-labels.toggle_theme') }}"
+                aria-label="Farbschema wechseln"
               >
                 <i class="bi bi-sliders" aria-hidden="true"></i>
               </button>
@@ -84,7 +111,7 @@
               <button
                 id="mode-toggle-btn"
                 class="theme-toggle-btn btn btn-accent"
-                aria-label="{{ trans('aria-labels.toggle_mode') }}"
+                aria-label="Hellen/Dunklen Modus wechseln"
               >
                 <i class="bi bi-sun" aria-hidden="true"></i>
               </button>
@@ -130,14 +157,14 @@
                   <img
                     src="assets/zein/zein-transport-card-back.png"
                     class="img-fluid"
-                    alt="Hero visual"
+                    alt="Visitenkarte Rückseite - Zein Transport Autotransport & Handel"
                   />
                 </figure>
                 <figure class="media secondary shadow-sm">
                   <img
                     src="assets/zein/zein-transport-card-front.png"
                     class="img-fluid"
-                    alt="Supporting visual"
+                    alt="Visitenkarte Vorderseite - Zein Transport Berlin"
                   />
                 </figure>
                 <div
@@ -155,10 +182,8 @@
       </section>
       <section id="about" class="about section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Über Uns</h2>
-          <p>
-            Ihr Partner für professionellen Autotransport und Fahrzeughandel
-          </p>
+          <h2>Ihr Partner für Autotransport und Fahrzeughandel</h2>
+          <p>Lernen Sie Zein Transport aus Berlin kennen</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row g-4 align-items-stretch">
@@ -171,7 +196,7 @@
                 <figure class="showcase-main">
                   <img
                     src="assets/img/about/truck.jpg"
-                    alt="Zein Transport Team"
+                    alt="Roter Autotransporter LKW von Zein Transport"
                     class="img-fluid"
                   />
                   <figcaption
@@ -269,7 +294,10 @@
         id="banner-section"
         class="banner-section section dark-background"
       >
-        <img src="assets/img/about/olde-mercedes.jpg" alt="" />
+        <img
+          src="assets/img/about/olde-mercedes.jpg"
+          alt="Zein Transport kauft klassischen Mercedes-Benz Oldtimer an"
+        />
         <div class="container text-center" data-aos="fade-up">
           <div class="cta-content">
             <h2
@@ -296,8 +324,8 @@
 
       <section id="services" class="services section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Unsere Dienstleistungen</p>
+          <h2>Unsere Dienstleistungen</h2>
+          <p>Autotransport und Fahrzeughandel in Berlin</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-5 justify-content-center">
@@ -431,7 +459,7 @@
                     <div class="image-container">
                       <img
                         src="assets/img/cta/cta-4.webp"
-                        alt="Autotransport"
+                        alt="Anfrage für Autotransport bei Zein Transport"
                         class="main-visual"
                       />
                     </div>
@@ -450,8 +478,8 @@
       </section>
       <section id="faq" class="faq section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>F.A.Q</h2>
-          <p>Häufig gestellte Fragen</p>
+          <h2>Häufig gestellte Fragen (FAQ)</h2>
+          <p>Antworten zu Transport und Autoankauf</p>
         </div>
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row justify-content-center">
@@ -533,8 +561,8 @@
       </section>
       <section id="contact" class="contact section dark-background">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Kontakt</h2>
-          <p>Kontaktieren Sie uns für ein Angebot</p>
+          <h2>Kontakt & Angebot</h2>
+          <p>Senden Sie uns eine unverbindliche Anfrage</p>
         </div>
         <div
           class="container position-relative"
@@ -592,9 +620,7 @@
                   </div> -->
 
                   <div class="col-md-6">
-                    <label for="form-email" class="sr-only"
-                      >{{ trans('aria-labels.your_email') }}</label
-                    >
+                    <label for="form-email" class="sr-only">Ihre E-Mail</label>
                     <input
                       type="email"
                       id="form-email"
@@ -607,7 +633,7 @@
 
                   <div class="col-md-6">
                     <label for="form-phone" class="sr-only"
-                      >{{ trans('aria-labels.your_phone_optional') }}</label
+                      >Ihre Telefonnummer (Optional)</label
                     >
                     <input
                       type="tel"
@@ -620,7 +646,7 @@
 
                   <!-- <div class="col-md-6">
                     <label for="form-subject" class="sr-only"
-                      >{{ trans('aria-labels.subject_eg_transport') }}</label
+                      >Betreff (z.B. Transportanfrage)</label
                     >
                     <input
                       type="text"
@@ -634,7 +660,7 @@
 
                   <!-- <div class="col-md-12">
                     <label for="form-car-model" class="sr-only"
-                      >{{ trans('aria-labels.car_model_eg_mercedes') }}</label
+                      >Fahrzeugmodell (z.B. Mercedes W124)</label
                     >
                     <input
                       type="text"
@@ -647,7 +673,7 @@
 
                   <!-- <div class="col-md-6">
                     <label for="form-start-address" class="sr-only"
-                      >{{ trans('aria-labels.start_address_transport') }}</label
+                      >Start-Adresse (Transport)</label
                     >
                     <input
                       type="text"
@@ -656,11 +682,11 @@
                       name="start-address"
                       placeholder="Start-Adresse (Transport)"
                     />
-                  </div> -->
+                  </div>
 
                   <!-- <div class="col-md-6">
                     <label for="form-end-address" class="sr-only"
-                      >{{ trans('aria-labels.end_address_transport') }}</label
+                      >Ziel-Adresse (Transport)</label
                     >
                     <input
                       type="text"
@@ -673,7 +699,7 @@
 
                   <div class="col-md-12">
                     <label for="form-message" class="sr-only"
-                      >{{ trans('aria-labels.your_message_details') }}</label
+                      >Ihre Nachricht (bitte weitere Details angeben)</label
                     >
                     <textarea
                       id="form-message"
@@ -785,7 +811,7 @@
       href="#"
       id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center"
-      aria-label="{{ trans('aria-labels.scroll_to_top') }}"
+      aria-label="Nach oben scrollen"
     >
       <i class="bi bi-arrow-up-short"></i>
     </a>
@@ -795,7 +821,7 @@
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="{{ trans('aria-labels.chat_on_whatsapp') }}"
+      aria-label="Auf WhatsApp chatten"
     >
       <i class="bi bi-whatsapp"></i>
     </a>
@@ -820,7 +846,7 @@
     <script src="assets/js/main.js"></script>
     <script>
       function handleFormSubmit(event) {
-        event.preventDefault(); // Stop form from submitting normally
+        event.preventDefault();
 
         const form = event.target;
         const name = document.getElementById("form-name").value;
